@@ -184,7 +184,7 @@ p {
 
 /* #region hero section */
 #hero {
-    background-image: url(../image/JohnWick3.jpg);
+    background-image: url(image/JohnWick3.jpg);
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -310,7 +310,7 @@ p {
     margin-top: 50px;
 }
 #service .item {
-    background-image: url(../image/img-1.png);
+    background-image: url(image/img-1.png);
     background-size: cover;
     flex-basis: 80%;
     border-radius: 10px;
@@ -433,7 +433,7 @@ p {
 
 /* #region about section */
 #about .container {
-    background-image: url(../image/JohnWick2.png);
+    background-image: url(image/JohnWick2.png);
     background-position: right top;
     background-repeat: no-repeat;
     background-size: 30vw;

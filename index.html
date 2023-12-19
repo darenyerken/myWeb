@@ -100,7 +100,7 @@
     <section id="project">
         <div class="container">
             <header>
-                <h1 class="section-title">RECENT <span class="crimson">PROJECTS</span></h1>
+                <h1 class="section-title">小 <span class="crimson">DEMO</span></h1>
             </header>
             <div class="content">
                 <div class="item">
@@ -118,6 +118,7 @@
                         <p>网页版贪吃蛇小游戏，听着有趣的bgm，看一看一旁待宰小傻羊，惬意享受休闲时刻
                             如果不满足于简单的休闲 还有困难模式等你来探索...
                         </p>
+                        <p>html+css+js编写</p>
                     </div>
                     <div class="picture"><img src="image/bg3.jpg" alt="project1"></div>
                 </div>
@@ -243,6 +244,25 @@
                 window.addEventListener('click',navListHide)
             })
         })
+
+        // 点击projects
+        const items = document.querySelectorAll('#project .item')
+        // 商品汇
+        items[0].onclick = ()=> {
+            window.open('https://darenyerken.github.io/sph/')
+        }
+        // 贪吃蛇
+        items[1].onclick = ()=> {
+            window.open('https://darenyerken.github.io/Greedysnake/')
+        }
+        // 电影院
+        items[2].onclick = ()=> {
+            window.open('https://darenyerken.github.io/cinemas/')
+        }
+        // bili
+        items[3].onclick = ()=> {
+            window.open('https://darenyerken.github.io/imitate-bili/')
+        }
     </script>
 </body>
 

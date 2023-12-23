@@ -385,9 +385,9 @@ p {
     height: 100%;
 }
 
-#project .item:hover img {
+/* #project .item:hover img {
     transform: scale(1.25);
-}
+} */
 
 #project .item .info {
     min-height: 300px;
@@ -548,9 +548,9 @@ p {
     transition: .2s 0s ease box-shadow;
 }
 
-#contact .contact-items .item:hover {
+/* #contact .contact-items .item:hover {
     box-shadow: 0 0 5px rgba(0, 0, 0, 50%);
-}
+} */
 
 #contact .contact-items .item img {
     width: 80px;
@@ -786,6 +786,13 @@ p {
         position: relative;
         top: -40px;
         margin-left: 50px;
+    }
+    /* hovers */
+    #project .item:hover img {
+        transform: scale(1.25);
+    }
+    #contact .contact-items .item:hover {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 50%);
     }
 }
 

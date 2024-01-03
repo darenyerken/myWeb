@@ -101,10 +101,13 @@ p {
     letter-spacing: 2px;
     transition: .2s 0s ease letter-spacing;
 }
+.page-header .nav li .navHighLight {
+    color: crimson;
+    letter-spacing: 4px;
+}
 
 .page-header .nav li a:hover {
-    color: crimson;
-    letter-spacing: 10px;
+    letter-spacing: 8px;
 }
 
 .page-header .humburger {

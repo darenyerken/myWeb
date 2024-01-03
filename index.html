@@ -18,7 +18,7 @@
                 <span class="crimson">Lots</span><span> of </span><span class="crimson">guns</span>
             </h1>
             <ul class="nav">
-                <li><a href="#hero">home</a></li>
+                <li><a href="#hero" class="navHighLight">home</a></li>
                 <!-- <li><a href="#service">services</a></li> -->
                 <li><a href="#project">projects</a></li>
                 <li><a href="#about">about</a></li>
@@ -263,6 +263,35 @@
         // bili
         items[3].onclick = ()=> {
             window.open('https://darenyerken.github.io/imitate-bili/')
+        }
+
+        // 获取每页高度
+        heroHeight = document.querySelector('#hero').scrollHeight
+        projectHeight = document.querySelector('#project').scrollHeight
+        aboutHeight = document.querySelector('#about').scrollHeight
+        contactHeight = document.querySelector('#contact').scrollHeight
+        // 获取导航栏
+        const navs = document.querySelectorAll('.page-header .nav li a')
+        // 导航字体特效
+        window.onscroll = () => {
+            // 获取当前视口聚焦点(页面的一半)
+            scrollTop = document.documentElement.scrollTop + window.innerHeight/2
+
+            // 根据视口聚焦线改变 nav高亮
+            if( scrollTop < heroHeight) {
+                document.querySelector('.navHighLight').classList.remove('navHighLight')
+                navs[0].classList.add('navHighLight')
+                console.log(navs)
+            } else if( scrollTop < heroHeight+ projectHeight) {
+                document.querySelector('.navHighLight').classList.remove('navHighLight')
+                navs[1].classList.add('navHighLight')
+            } else if( scrollTop < heroHeight + projectHeight + aboutHeight) {
+                document.querySelector('.navHighLight').classList.remove('navHighLight')
+                navs[2].classList.add('navHighLight')
+            } else if( scrollTop < heroHeight + projectHeight + aboutHeight + contactHeight) {
+                document.querySelector('.navHighLight').classList.remove('navHighLight')
+                navs[3].classList.add('navHighLight')
+            }
         }
     </script>
 </body>

@@ -266,10 +266,10 @@
         }
 
         // 获取每页高度
-        heroHeight = document.querySelector('#hero').scrollHeight
-        projectHeight = document.querySelector('#project').scrollHeight
-        aboutHeight = document.querySelector('#about').scrollHeight
-        contactHeight = document.querySelector('#contact').scrollHeight
+        heroPosition = document.querySelector('#hero').scrollHeight
+        projectPosition = document.querySelector('#project').scrollHeight + heroPosition
+        aboutPosition = document.querySelector('#about').scrollHeight + projectPosition
+        contactPosition = document.querySelector('#contact').scrollHeight + aboutPosition
         // 获取导航栏
         const navs = document.querySelectorAll('.page-header .nav li a')
         // 导航字体特效
@@ -278,17 +278,16 @@
             scrollTop = document.documentElement.scrollTop + window.innerHeight/2
 
             // 根据视口聚焦线改变 nav高亮
-            if( scrollTop < heroHeight) {
+            if( scrollTop < heroPosition) {
                 document.querySelector('.navHighLight').classList.remove('navHighLight')
                 navs[0].classList.add('navHighLight')
-                console.log(navs)
-            } else if( scrollTop < heroHeight+ projectHeight) {
+            } else if( scrollTop < projectPosition) {
                 document.querySelector('.navHighLight').classList.remove('navHighLight')
                 navs[1].classList.add('navHighLight')
-            } else if( scrollTop < heroHeight + projectHeight + aboutHeight) {
+            } else if( scrollTop < aboutPosition) {
                 document.querySelector('.navHighLight').classList.remove('navHighLight')
                 navs[2].classList.add('navHighLight')
-            } else if( scrollTop < heroHeight + projectHeight + aboutHeight + contactHeight) {
+            } else if( scrollTop < contactPosition) {
                 document.querySelector('.navHighLight').classList.remove('navHighLight')
                 navs[3].classList.add('navHighLight')
             }
